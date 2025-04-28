@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="styles/style.css">
+  <title>Pine-Crest-Lodge</title>
+</head>
+
+<body>
+  <header>
+    <nav>
+      <!-- Navigation links -->
+      <div class="logo-header">
+        <img src="images/logo/pine-cone.png" alt="logo">
+      </div>
+      <div class="hotel-name">
+        <h1><strong>PineCrest Lodge</strong></h1>
+      </div>
+      <div id="desktop-nav">
+        <ul>
+          <li>
+            <a href="#reservation-section">Book Now</a>
+          </li>
+          <li>
+            <a href="#rooms-nav">Rooms</a>
+          </li>
+          <li>
+            <a href="#contact-section">Contact</a>
+          </li>
+        </ul>
+      </div>
+      <!--menuButton for mobile view -->
+      <img src="images/button/house.png" class="cdx" alt="Menu" width="40" height="40" id="menuButton">
+      <!-- Mobile navigation menu -->
+      <div id="mobile-nav" class="overlay">
+        <img src="images/button/close.png" class="closebtn" alt="Close" width="40" height="40">
+        <div class="overlay-content">
+          <!-- Navigation links wrapped inside the menuButton -->
+          <a href="#rooms-nav">Rooms</a>
+          <a href="#contact-nav">Contact</a>
+          <a href="#reservation-section">Book Now</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+
+
+  <!-- Slider section -->
+  <div class="slider-section">
+    <div class="slide">
+      <img src="images/slides/slide1.png" alt="Slide 1">
+      <div class="slide-text">Discover a World <br>of Tranquility</div>
+    </div>
+    <div class="slide">
+      <img src="images/slides/slide2.jpeg" alt="Slide 2">
+      <div class="slide-text">Embrace the<br> Luxury of Comfort</div>
+    </div>
+    <div class="slide">
+      <img src="images/slides/slide3.jpg" alt="Slide 3">
+      <div class="slide-text">Indulge in<br> Unmatched Elegance</div>
+    </div>
+    <div class="slide">
+      <img src="images/slides/slide4.jpg" alt="Slide 4">
+      <div class="slide-text">Experience the <br> Ultimate Relaxation</div>
+    </div>
+  </div>
+
+
+  <!--Intro Text section -->
+  <section class="text-section">
+    <div class="text-box">
+      <h1>PineCrest Lodge</h1>
+    </div>
+    <div class="text-box">
+      <h2>Enjoy a Luxury Experience</h2>
+    </div>
+    <div class="additional-text">
+      <p>Welcome to the best five-star deluxe hotel in Town. Hotel elementum sesue the aucan vestibulum aliquam
+        justo in
+        sapien rutrum volutpat. Donec in quis the pellentesque velit. Hotel ut nisl quam nestibulum.</p>
+    </div>
+  </section>
+
+  <!--Counting section-->
+  <section class="counter-wrapper">
+    <article class="counter" id="customers">
+      <div class="counter-top">
+        <p class="counter-value num">0</p>
+        <div class="counter-label-wrapper">
+          <p class="counter-label">M+</p>
+        </div>
+      </div>
+      <div class="counter-bottom">
+        <p class="counter-label">Customers</p>
+      </div>
+    </article>
+    <article class="counter" id="apartments">
+      <div class="counter-top">
+        <p class="counter-value num">0</p>
+      </div>
+      <div class="counter-bottom">
+        <p class="counter-label">Apartments</p>
+      </div>
+    </article>
+    <div class="counter" id="bedrooms">
+      <div class="counter-top">
+        <p class="counter-value num">0</p>
+      </div>
+      <div class="counter-bottom">
+        <p class="counter-label">Bedrooms</p>
+      </div>
+    </div>
+    <article class="counter" id="branches">
+      <div class="counter-top">
+        <p class="counter-value num">0</p>
+      </div>
+      <div class="counter-bottom">
+        <p class="counter-label">Branches</p>
+      </div>
+    </article>
+  </section>
+
+
+  <!--Reservation-->
+  <div class="reservation-section" id="reservation-section">
+    <h2>Make a Reservation</h2>
+    <form action="submit.html" target="_blank" method="post">
+      <div class="form-group">
+        <label for="arrival">Arrival Date:<span>*</span></label>
+        <input type="date" id="arrival" name="arrival" required>
+      </div>
+      <div class="form-group">
+        <label for="departure">Departure Date:<span>*</span></label>
+        <input type="date" id="departure" name="departure" required>
+      </div>
+      <div class="form-group">
+        <label for="guests">Number of Guests:<span>*</span></label>
+        <input type="number" id="guests" name="guests" min="1" required>
+      </div>
+      <div class="form-group">
+        <label for="room-type">Room Type:<span>*</span></label>
+        <select id="room-type" name="room-type" required>
+          <option value="standard"></option>
+          <option value="standard">Standard Room</option>
+          <option value="deluxe">Deluxe Room</option>
+          <option value="suite">Suite Room</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="room-type">Select a Branch:<span>*</span></label>
+        <select id="room-type" name="room-type" required>
+          <option value="standard"></option>
+          <option value="standard">Collins Street West</option>
+          <option value="deluxe">Johnson Street North</option>
+          <option value="suite">Coast view City Bay</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="email">Email Address:<span>*</span></label>
+        <input type="email" id="email" name="email" required>
+      </div>
+      <button type="submit" class="submit-btn">Book Now</button>
+    </form>
+  </div>
+
+
+  <!--ROOMS-->
+  <div id="rooms-nav"></div>
+  <h1 id="rooms-title">Available Rooms</h1>
+  <section class="rooms-section">
+    <article class="room-container">
+      <div class="room-image">
+        <img src="images/bedrooms/bedroom.jpg" alt="Bedroom">
+        <div class="room-details">
+          <h3>Standard Room</h3>
+          <p class="price num">$50/day</p>
+        </div>
+        <div class="room-info">
+          <h3 class="num">$50/day</h3>
+          <p>Facilities:</p>
+          <ul>
+            <li>Free Wi-Fi</li>
+            <li>Air Conditioning</li>
+            <li>Television</li>
+            <li>Ensuite Bathroom</li>
+          </ul>
+        </div>
+      </div>
+    </article>
+    <article class="room-container">
+      <div class="room-image">
+        <img src="images/bedrooms/bedroom2.jpg" alt="Bedroom">
+        <div class="room-details">
+          <h3>Deluxe Room</h3>
+          <p class="price num">$120/day</p>
+        </div>
+        <div class="room-info">
+          <h3 class="num">$120/day</h3>
+          <p>Facilities:</p>
+          <ul>
+            <li>Free Wi-Fi</li>
+            <li>Air Conditioning</li>
+            <li>Television</li>
+            <li>Ensuite Bathroom</li>
+            <li>Mini Bar</li>
+            <li>Balcony</li>
+          </ul>
+        </div>
+      </div>
+    </article>
+    <article class="room-container">
+      <div class="room-image">
+        <img src="images/bedrooms/bedroom3.jpg" alt="Bedroom">
+        <div class="room-details">
+          <h3>Suite Room</h3>
+          <p class="price num">$200/day</p>
+        </div>
+        <div class="room-info">
+          <h3 class="num">$200/day</h3>
+          <p>Facilities:</p>
+          <ul>
+            <li>Free Wi-Fi</li>
+            <li>Air Conditioning</li>
+            <li>Television</li>
+            <li>Ensuite Bathroom</li>
+            <li>Mini Bar</li>
+            <li>Balcony</li>
+            <li>Spa</li>
+            <li>Living Room</li>
+          </ul>
+        </div>
+      </div>
+    </article>
+  </section>
+
+
+  <!--Discover Our Features-->
+  <h1 id="features-title">Discover Our Features</h1>
+  <div id="container1" class="container1">
+    <div class="image-boxes">
+      <div class="image-box">
+        <img src="images/features/home-food2.jpg" alt="Image 1">
+        <div class="overlay-text">Food</div>
+        <div class="lorem-text hover">
+          <h5><strong>Food</strong></h5>
+          <p>Lorem ipsum dolor sit amet</p>
+        </div>
+      </div>
+      <div class="image-box">
+        <img src="images/features/event-hall.jpg" alt="Image 2">
+        <div class="overlay-text">Event Center</div>
+        <div class="lorem-text hover">
+          <h5><strong>Event Center</strong></h5>
+          <p>Lorem ipsum dolor sit amet</p>
+        </div>
+      </div>
+      <div class="image-box">
+        <img src="images/features/bar.jpg" alt="Image 3">
+        <div class="overlay-text">Bar</div>
+        <div class="lorem-text hover">
+          <h5><strong>Bar</strong></h5>
+          <p>Lorem ipsum dolor sit amet</p>
+        </div>
+      </div>
+      <div class="image-box">
+        <img src="images/features/golf.jpg" alt="Image 4">
+        <div class="overlay-text">Recreation</div>
+        <div class="lorem-text hover">
+          <h5><strong>Recreation</strong></h5>
+          <p>Lorem ipsum dolor sit amet</p>
+        </div>
+      </div>
+      <div class="image-box">
+        <img src="images/features/news.jpg" alt="Image 5">
+        <div class="overlay-text">Newsletter & Trends</div>
+        <div class="lorem-text hover">
+          <h5><strong>Newsletter & Trends</strong></h5>
+          <p>Lorem ipsum dolor sit amet</p>
+        </div>
+      </div>
+      <div class="image-box">
+        <img src="images/features/img6.jpg" alt="Image 6">
+        <div class="overlay-text">Relaxation</div>
+        <div class="lorem-text hover">
+          <h5><strong>Relaxation</strong></h5>
+          <p>Lorem ipsum dolor sit amet</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!--Activities-->
+  <h1 id="activity-title">Beauty Meets Perfection</h1>
+  <div id="activity">
+    <div class="activity-item">
+      <div class="activity-content">
+        <div class="activity-text">
+          <h3>Spa</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vitae eros eget tellus tristique
+            bibendum.
+            Donec rutrum sed sem quis venenatis.</p>
+          <button>Find out more</button>
+        </div>
+        <div class="activity-image">
+          <img src="images/Activities/spa.jpg" alt="Spa">
+        </div>
+      </div>
+    </div>
+    <div class="activity-item">
+      <div class="activity-content reverse">
+        <div class="activity-text">
+          <h3>Gym</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vitae eros eget tellus tristique
+            bibendum.
+            Donec rutrum sed sem quis venenatis.</p>
+          <button>Find out more</button>
+        </div>
+        <div class="activity-image">
+          <img src="images/Activities/Gym.jpg" alt="Gym">
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!--Reviews-->
+  <h1 id="reviews-title">Client Reviews</h1>
+  <div class="review-section">
+    <div class="review-item">
+      <img src="images/clients/client1.jpg" alt="Review 1">
+      <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit".</p>
+      <p>-Sarah Johnson</p>
+    </div>
+    <div class="review-item">
+      <img src="images/clients/client2.jpg" alt="Review 1">
+      <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit."</p>
+      <p>-Max John</p>
+    </div>
+    <div class="review-item">
+      <img src="images/clients/client3.jpg" alt="Review 1">
+      <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit."</p>
+      <p>-Andrew Peterson</p>
+    </div>
+    <div class="review-item">
+      <img src="images/clients/client4.jpg" alt="Review 1">
+      <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit."</p>
+      <p>-Ellena Jackson</p>
+    </div>
+    <div class="review-item">
+      <img src="images/clients/client5.jpg" alt="Review 1">
+      <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit."</p>
+      <p>-Adam Alen</p>
+    </div>
+  </div>
+
+
+  <!-- contact -->
+  <section id="contact-nav">
+    <div class="info-section" id="contact-section">
+      <div class="info-container">
+        <img src="images/logo/pine-cone.png" alt="Hotel Logo">
+        <p>PineCrest Lodge</p>
+      </div>
+      <div class="info-container">
+        <h3>Location</h3>
+        <p>OUR LOCATIONS</p>
+        <p>~PO Box 161688 Collins Street West</p>
+        <p>Victoria 8007 Australia</p>
+        <p>~PO Box 16441 Johnson Street North</p>
+        <p>Alexis 1160 Australia</p>
+        <p>~PO Box 2934 Coast view City Bay</p>
+        <p>Paramount 4412 Australia</p>
+      </div>
+      <div class="info-container">
+        <h3>Phone Support</h3>
+        <p>24 HOURS A DAY</p>
+        <p>+61 3 8888 6789</p>
+        <p>info@pinecrestlodge.com</p>
+      </div>
+      <div class="info-container">
+        <h3>Connect With Us</h3>
+        <p>SOCIAL MEDIA CHANNELS</p>
+        <div class="social-media-icons">
+          <a href="#"><img src="images/SocialMedia/facebook.png" alt="Facebook"></a>
+          <a href="#"><img src="images/SocialMedia/twitter.png" alt="Twitter"></a>
+          <a href="#"><img src="images/SocialMedia/instagram.png" alt="Instagram"></a>
+          <a href="#"><img src="images/SocialMedia/email.png" alt="Email"></a>
+          <a href="#"><img src="images/SocialMedia/telephone.png" alt="Telephone"></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <footer>
+    <p>&copy;2024 PineCrestLodge.com All rights reserved.</p>
+    <p><a href="https://www.flaticon.com/free-icons/pine-cone" title="pine cone icons" target="_blank">Pine cone icons
+        created by
+        dreamicons -
+        Flaticon</a></p>
+  </footer>
+</body>
+
+</html>
+<script src="js/script.js"></script>
